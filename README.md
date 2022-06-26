@@ -2,6 +2,8 @@
 
 App that show the current weather forecast of the selected city.
 
+![imagen](https://user-images.githubusercontent.com/48588622/175824767-c092e15b-f6e1-4db2-ad29-ad7f3cf73e24.png)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
 
