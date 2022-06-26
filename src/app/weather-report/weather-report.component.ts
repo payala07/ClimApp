@@ -10,6 +10,9 @@ import { WeatherService } from '../services/weather.service';
 })
 export class WeatherReportComponent implements OnInit {
   data$: Observable<any> = new Observable<any>();
+  today: Date = new Date();
+
+  loading = false;
 
   constructor(
     private weatherService: WeatherService,
@@ -20,8 +23,13 @@ export class WeatherReportComponent implements OnInit {
     this.data$ = this.route.params.pipe(
       map(params => params["locationName"]),
       filter(name => !!name),
-      concatMap(name => this.weatherService.getWeatherForCity(name))
+      tap(() => {
+        this.loading = true;
+      }),
+      concatMap(name => this.weatherService.getWeatherForCity(name)),
+      tap(() => {
+        this.loading = false;
+      })
     );
   }
-
 }
