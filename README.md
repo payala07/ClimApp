@@ -1,5 +1,8 @@
 # WeatherApp
 
+App that show the current weather forecast of the selected city.
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
 
 ## Development server
